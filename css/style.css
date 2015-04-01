@@ -556,22 +556,20 @@ b {
 }
 .block-logo {
   background-color: #070708;
-  width: 17.2%;
-  padding: 2% 2% 3%;
+  width: 17.16666667%;
   position: absolute;
-  top: 1px;
+  top: 0;
+  display: block;
+  text-decoration: none;
   left: 50%;
-  margin-left: -8.5%;
+  margin-left: -8.58333333%;
   z-index: 2;
 }
-.block-logo:after {
-  content: "";
-  left: 0;
-  right: 0;
-  position: absolute;
-  height: 6px;
-  background-color: #f7931d;
-  bottom: -2px;
+.block-logo img {
+  display: block;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
 }
 .swiper-container.swiper-container-partners {
   vertical-align: middle;
@@ -585,8 +583,8 @@ b {
 .swiper-container-carousel .wrapper-block-style {
   width: 100%;
 }
-.swiper-container-main img,
-.swiper-container-main a {
+.swiper-container-main .swiper-wrapper img,
+.swiper-container-main .swiper-wrapper a {
   width: 100%;
 }
 .swiper-container {
