@@ -1,14 +1,19 @@
 .footer-main{
 	background: #fff;
-	min-height: 114 * @toRems;
+	min-height: 226 * @toRems;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 // footer main top
 .footer-main-top{
 	background: #2c2c2c;
+	color: #fff;
 	border-top: 4px solid #f7931d;
+	min-height: 181 * @toRems;
+	.icon {
+		color: #f7931d;
+	}
 }
 
 .logo-footer{
@@ -19,12 +24,12 @@
 
 .content-footer{
 	margin-left: 144px;
+	overflow: hidden;
 }
 .section-footer{
 	float: left;
 	padding-left: 85px;
 	position: relative;
-	overflow: hidden;
 	width: 50%;
 	&:after{
 		content: "";
@@ -35,6 +40,58 @@
 		height: 500px;
 		left: 42px;
 		width: 1px;
+	}
+}
+
+.title-footer {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 200;
+	text-transform: uppercase;
+	margin: 19px 0 9px 0;
+	.icon{
+		font-size: 25px;
+		margin: -4px 6px 0 0;
+	}
+}
+
+.column-footer{
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 25px;
+	margin: 0 -5px;
+	> div {
+		float: left;
+		padding: 0 5px 16px;
+		width: 50%;
+	}
+}
+
+.title-footer-group{
+	font-weight: 400;
+}
+
+.time-work{
+	color: #f7931d;
+	line-height: 17px;
+	margin-top: 3px;
+}
+
+.address{
+	margin: 7px 0 0 0;
+	padding: 0;
+	list-style: none;
+	li{
+		+ li {
+			margin-top: 18px;
+		}
+	}
+	.icon{
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 23px;
+		width: 30px;
 	}
 }
 
@@ -69,16 +126,11 @@
 	margin-right: 514px;
 }
 
-@media (min-width: 1051px){
-	.footer-main{
-		z-index: 1;
-	}
-}
+
 
 
 @media (max-width: 1050px){
 	.footer-main{
-		text-align: center;
 		.main-width{
 			padding-left: 8px;
 			padding-right: 8px;
@@ -98,6 +150,7 @@
 		margin: 12px auto 0;
 	}
 	.footer-main-bottom{
+		text-align: center;
 		padding: 27px 0 17px 0;
 	}
 }
@@ -108,13 +161,62 @@
 		padding-right: 18px;
 	}
 }
+
+@media (max-width: 930px){
+
+	.section-footer {
+		padding-left: 20px;
+		&:after{
+			left: 10px;
+		}
+	}
+
+	.logo-footer{
+		width: 90px;
+	}
+	.content-footer{
+		margin-left: 90px;
+	}
+}
+
+@media (max-width: 767px){
+	.logo-footer{
+		width: auto;
+		float: none;
+	}
+	.content-footer{
+		margin-left: 0;
+
+	}
+	.section-footer{
+		padding: 0;
+		&:after{
+			display: none;
+		}
+	}
+	.footer-main-top{
+		padding-top: 20px;
+	}
+	.column-footer{
+		margin: 0;
+	}
+}
+
+
 @media (max-width: 640px){
 	@footer_em: (1 / 16) + 0em;
 	.footer-main .main-width{
 		padding-left: 13px;
 		padding-right: 13px;
 	}
-
+	.section-footer{
+		float: none;
+		width: auto;
+		margin-top: 20px;
+	}
+	.column-footer{
+		overflow: hidden;
+	}
 
 }
 @media (max-width: 440px){
