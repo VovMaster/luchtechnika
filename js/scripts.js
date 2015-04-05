@@ -135,12 +135,12 @@ function ajax_slaider(){
 				paginationClickable: true
 			});
 			$('.swiper-button-prev').on('click', function(e){
-				e.preventDefault()
+				e.preventDefault();
 				var swiper = $(this).siblings('.swiper-container').data('swiper');
 				swiper.swipePrev();
 			});
 			$('.swiper-button-next').on('click', function(e){
-			e.preventDefault()
+				e.preventDefault();
 				var swiper = $(this).siblings('.swiper-container').data('swiper');
 				swiper.swipeNext();
 			});
@@ -159,7 +159,16 @@ function ajax_slaider(){
 				spaceBetween: 24, 
 				paginationClickable: true
 			});
-
+			$('.swiper-button-prev').on('click', function(e){
+				e.preventDefault();
+				var swiper = $(this).siblings('.swiper-container').data('swiper');
+				swiper.swipePrev();
+			});
+			$('.swiper-button-next').on('click', function(e){
+				e.preventDefault();
+				var swiper = $(this).siblings('.swiper-container').data('swiper');
+				swiper.swipeNext();
+			});
 
 		}
 
@@ -173,12 +182,12 @@ function ajax_slaider(){
 				paginationClickable: true
 			});
 			$('.swiper-button-prev').on('click', function(e){
-				e.preventDefault()
+				e.preventDefault();
 				var swiper = $(this).siblings('.swiper-container').data('swiper');
 				swiper.swipePrev();
 			});
 			$('.swiper-button-next').on('click', function(e){
-			e.preventDefault()
+				e.preventDefault();
 				var swiper = $(this).siblings('.swiper-container').data('swiper');
 				swiper.swipeNext();
 			});
@@ -238,4 +247,54 @@ ajax_slaider();
 // END IK SElECT
 ///////////////////////////////////////
 
+
+
+// FANCYBOX
+///////////////////////////////////////
+
+	$("a.gallery").fancybox({
+		 "padding" : 17,
+	});
+
+// END FANCYBOX
+///////////////////////////////////////
+
+
 });
+
+
+// ISOTOPE
+///////////////////////////////////////
+
+
+$(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .active').removeClass('active');
+        $(this).addClass('active');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
+});
+
+
+// END ISOTOPE
+///////////////////////////////////////
