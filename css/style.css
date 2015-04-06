@@ -1004,6 +1004,15 @@ textarea.form-control:focus {
   bottom: 8%;
   margin-bottom: -21px;
 }
+.swiper-container-product a {
+  display: block;
+}
+.swiper-container-product img {
+  display: block;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+}
 .news-inside {
   padding-bottom: 40px;
 }
@@ -1057,6 +1066,9 @@ textarea.form-control:focus {
 }
 .product-column-right {
   margin-left: 39.0625%;
+}
+.product-inside {
+  padding-bottom: 23px;
 }
 body {
   background: #fff;
@@ -2712,12 +2724,15 @@ body {
   margin: 0 12px 0 17px;
   padding-top: 4px;
 }
+.accordion-wrap-title .close {
+  display: none;
+}
 .accordion-title {
   margin: 0;
 }
 .accordion-content {
   background-color: #f3f3f3;
-  padding: 31px 20px 10px;
+  padding: 20px;
   display: none;
 }
 .accordion-content a {
@@ -2734,6 +2749,27 @@ body {
 .accordion-content a img {
   margin-bottom: 15px;
 }
+.document-download {
+  padding: 10px 0 0 0;
+  margin-bottom: -10px;
+}
+.document-download a {
+  color: #9a9a9a;
+  display: inline-block;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 33px;
+  line-height: 18px;
+  padding-bottom: 20px;
+}
+.document-download a img {
+  margin: 0 auto 15px;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
 .open-accordion .accordion-title {
   background-color: #7c7c7c;
   color: #ffffff;
@@ -2744,6 +2780,12 @@ body {
 }
 .open-accordion .accordion-content {
   display: block;
+}
+.open-accordion .close {
+  display: block;
+}
+.open-accordion .open {
+  display: none;
 }
 /*----------------END ACCORDION----------------*/
 @media (max-width: 767px) {

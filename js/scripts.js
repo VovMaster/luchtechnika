@@ -194,6 +194,28 @@ function ajax_slaider(){
 
 		}
 
+		if(thisSwiper.hasClass('swiper-container-product')){
+
+		   	var mySwiper = thisSwiper.swiper({
+				loop:true,
+				grabCursor: true,
+				slidesPerView: 3,
+				spaceBetween: 5, 
+				paginationClickable: true
+			});
+			$('.swiper-button-prev').on('click', function(e){
+				e.preventDefault();
+				var swiper = $(this).siblings('.swiper-container').data('swiper');
+				swiper.swipePrev();
+			});
+			$('.swiper-button-next').on('click', function(e){
+				e.preventDefault();
+				var swiper = $(this).siblings('.swiper-container').data('swiper');
+				swiper.swipeNext();
+			});
+
+		}
+
 
 
 	});
@@ -260,6 +282,34 @@ ajax_slaider();
 ///////////////////////////////////////
 
 
+// ACCORDION
+///////////////////////////////////////
+
+
+	$('.wrap-accordion .open').click(function(){
+		$(this).parent().next().stop();
+		$(this).parent().next().slideDown(300, function(){
+	 		$(this).closest('.wrap-accordion').addClass('open-accordion');
+		});
+		return false
+	});
+
+
+	$('.wrap-accordion .close').click(function(){
+		$(this).parent().next().stop();
+		$(this).parent().next().slideUp(300, function(){
+	 		$(this).closest('.wrap-accordion').removeClass('open-accordion');
+		});
+		return false
+	});
+
+
+
+
+// END ACCORDION
+///////////////////////////////////////
+
+
 });
 
 
@@ -299,26 +349,3 @@ $(window).load(function(){
 // END ISOTOPE
 ///////////////////////////////////////
 
-// ACCORDION
-///////////////////////////////////////
-
-
-	$('.header-accordion .open').click(function(){
-		$(this).parent().next().stop();
-		$(this).parent().next().slideDown(300, function(){
-			$(this).parent().addClass('open-accordion')
-		});
-		return false
-	});
-
-	$('.header-accordion .close').click(function(){
-		$(this).parent().next().stop();
-		$(this).parent().next().slideUp(300, function(){
-			$(this).parent().removeClass('open-accordion')
-		});
-		return false
-	});
-
-
-// END ACCORDION
-///////////////////////////////////////
