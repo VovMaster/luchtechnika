@@ -298,3 +298,27 @@ $(window).load(function(){
 
 // END ISOTOPE
 ///////////////////////////////////////
+
+// ACCORDION
+///////////////////////////////////////
+
+
+	$('.header-accordion .open').click(function(){
+		$(this).parent().next().stop();
+		$(this).parent().next().slideDown(300, function(){
+			$(this).parent().addClass('open-accordion')
+		});
+		return false
+	});
+
+	$('.header-accordion .close').click(function(){
+		$(this).parent().next().stop();
+		$(this).parent().next().slideUp(300, function(){
+			$(this).parent().removeClass('open-accordion')
+		});
+		return false
+	});
+
+
+// END ACCORDION
+///////////////////////////////////////

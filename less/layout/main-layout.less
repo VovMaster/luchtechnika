@@ -549,6 +549,78 @@ body{
 		border-bottom: none;
 	}
 }
+.characteristic-goods{
+	> div{
+		width: 66px;
+		height: 67px;
+		display: inline-block;
+		margin-right: 26px;
+	}
+}
+/*----------------ACCORDION--------------------*/
+.wrap-accordion{
+	margin-top: 13px;
+}
+.accordion-title{
+	font-size: 16px;
+	color: #9a9a9a;
+	font-weight: 400;
+	background-color: #f1efef;
+	line-height: 18px;
+	padding: 15px 160px 15px 14px;
+}
+.accordion-wrap-title{
+	position: relative;
+	.open, .close{
+		position: absolute;
+		top: 16px;
+		right: 0;
+		color: #9a9a9a;
+		text-decoration: none;
+		font-weight: 400;
+	}
+	.icon-arrow-up{
+		font-size: 9px;
+		margin: 0 12px 0 17px;
+		padding-top: 4px;
+	}
+}
+.accordion-title{
+	margin: 0;
+}
+.accordion-content{
+	background-color: #f3f3f3;
+	padding: 31px 20px 10px;
+	display: none;
+	a{
+		color: #9a9a9a;
+		display: inline-block;
+		text-decoration: none;
+		width: 100px;
+		text-align: center;
+		vertical-align: top;
+		margin-right: 33px;
+		line-height: 18px;
+		padding-bottom: 20px;
+		img{
+			margin-bottom: 15px;
+		}
+	}
+}
+.open-accordion{
+	
+	.accordion-title{
+		background-color: #7c7c7c;
+		color: #ffffff;
+	}
+	.open, .close{
+		color: #ffffff;
+	}
+	.accordion-content{
+		display: block;
+	}
+}
+/*----------------END ACCORDION----------------*/
 @media (max-width: 767px){
 	.item-style{
 		padding-top: 9 * @toRems;
