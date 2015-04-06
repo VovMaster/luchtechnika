@@ -253,7 +253,7 @@ ajax_slaider();
 ///////////////////////////////////////
 
 	$("a.gallery").fancybox({
-		 "padding" : 17,
+		"padding" : 17
 	});
 
 // END FANCYBOX

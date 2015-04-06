@@ -9,3 +9,150 @@
 }
 
 .placeholdr { color: gray }
+
+.form-control{
+	border: 1px solid transparent;
+	background: #ffffff;
+	font-size: 20px;
+	font-weight: 200;
+	color: #000000;
+	padding: (4 / 15) * 0em (8 / 15) + 0em;
+	display: block;
+	width: 100%;
+	.transition(0.2s);
+	font-family: "PF DinDisplay Pro";
+}
+input.form-control{
+	height: (30 / 15) + 0em;
+
+	&:focus{
+		border-color: #f7931d;
+		.box-shadow(0 0 3px 1px rgba(247, 147, 29, 1.0));
+	}
+}
+
+textarea.form-control{
+	height: 175px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	resize: none;
+	&:focus{
+		border-color: #f7931d;
+		.box-shadow(0 0 3px 1px rgba(247, 147, 29, 1.0));
+	}
+}
+
+.btn-green{
+	background: #79b03d;
+	&:hover{
+		background: #79b03d - 20%;
+	}
+}
+.btn-orange{
+	background: #f7931d;
+	&:hover{
+		background: #f7931d - 20%;
+	}
+}
+.btn-gray{
+	background: #585858;
+	&:hover{
+		background: #585858 - 20%;
+	}
+}
+
+.btn{
+	display: inline-block;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.3;
+	font-family: inherit;
+	margin: auto;
+	text-transform: uppercase;
+	padding: 9px 42px;
+	cursor: pointer;
+}
+
+.btn-big{
+	font-size: 13px;
+	line-height: 1.5;
+	padding: 10px 20px;
+	.icon{
+		font-size: 17px;
+		vertical-align: middle;
+	}
+}
+
+
+// FORM MASSEGE
+////////////////////////////////////////
+
+.block-form{
+	background-image: url(../images/form-bg.jpg);
+	background-size: cover;
+	background-position: 50% 100%;
+	padding: 24px 0;
+}
+
+.input-col{
+
+	&:after{
+		clear: both;
+	    content: " ";
+    	display: table;
+    	width: 100%;
+	}
+
+	margin: 0 -4px;
+	.wrapper-form-controll{
+		float: left;
+		padding: 0 4px;
+		width: 50%;
+	}
+}
+
+.wrapper-form-controll{
+	margin-bottom: 8px;
+}
+
+.wrapper-form-btn{
+	margin-top: 22px;
+	text-align: center;
+}
+
+.form-massege{
+	margin: auto;
+	max-width: 508px;
+	.form-control{
+		background: rgba(255, 255, 255, 0.95);
+		&:focus{
+			background: #fff;
+		}
+	}
+	p{
+		font-size: 20px;
+		font-weight: 200;
+		color: #fff;
+		margin-bottom: 12px;
+	}
+	> p:first-child{
+		margin-top: -13px;
+	}
+}
+
+
+// END FORM MASSEGE
+////////////////////////////////////////
+
+
+.has-error {
+	border-color: #ff0000;
+	.box-shadow(0 0 3px 1px rgba(255, 0, 0, 1));
+}
+
+.has-success{
+	border-color: rgba(121, 176, 61, 1);
+	.box-shadow(0 0 3px 1px rgba(121, 176, 61, 1));
+}
