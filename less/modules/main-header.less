@@ -542,15 +542,31 @@ body{
 	font-style: normal;
 	vertical-align: top;
 }
+.position-fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
 
+.main-wrap-header-main{
+	min-height: 60px;
+}
 
 // MEDIA SIGN FORM
 ////////////////////////////
 
 @media(max-width: 1050px){
 
+	.position-fixed{
+		position: static;
+	}
+
 	.wrapper-main-nav{
 		overflow: auto;
+	}
+	.main-wrap-header-main{
+		min-height: 0px;
 	}
 	.sign-form{
 		font-size: 21px;
@@ -607,6 +623,21 @@ body{
 		img{
 			display: inline-block;
 			vertical-align: middle;
+		}
+	}
+
+	.news-block{
+		.wrapper-block-top{
+			padding: 0 15px;
+		}
+	}
+
+	.news-inside {
+		padding-right: 15px;
+		padding-left: 15px;
+		.bg-color{
+			margin: 0 -15px;
+			padding: 0 15px;
 		}
 	}
 

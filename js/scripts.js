@@ -196,23 +196,34 @@ function ajax_slaider(){
 
 		if(thisSwiper.hasClass('swiper-container-product')){
 
-		   	var mySwiper = thisSwiper.swiper({
-				loop:true,
-				grabCursor: true,
-				slidesPerView: 3,
-				spaceBetween: 5, 
-				paginationClickable: true
-			});
-			$('.swiper-button-prev').on('click', function(e){
-				e.preventDefault();
-				var swiper = $(this).siblings('.swiper-container').data('swiper');
-				swiper.swipePrev();
-			});
-			$('.swiper-button-next').on('click', function(e){
-				e.preventDefault();
-				var swiper = $(this).siblings('.swiper-container').data('swiper');
-				swiper.swipeNext();
-			});
+			$('html').addClass('title-none');
+
+			if($('.swiper-container-product .swiper-slide').length > 3 ){
+
+				$('.swiper-wrap-product').addClass('swiper-yes');
+
+				console.log($('.swiper-container-product .swiper-slide').length);
+
+			   	var mySwiper = thisSwiper.swiper({
+					loop:true,
+					grabCursor: true,
+					slidesPerView: 3,
+					spaceBetween: 5, 
+					paginationClickable: true
+				});
+				$('.swiper-button-prev').on('click', function(e){
+					e.preventDefault();
+					var swiper = $(this).siblings('.swiper-container').data('swiper');
+					swiper.swipePrev();
+				});
+				$('.swiper-button-next').on('click', function(e){
+					e.preventDefault();
+					var swiper = $(this).siblings('.swiper-container').data('swiper');
+					swiper.swipeNext();
+				});
+
+			}
+			
 
 		}
 
@@ -222,9 +233,115 @@ function ajax_slaider(){
 
 }
 
+    // AJAX
+
+	function showDesctop(){  
+
+	    $.ajax({  
+	        url: "slaider-ajax1.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax1").html(html);  
+	        }  
+	    });    
+
+	    $.ajax({  
+	        url: "slaider-ajax2.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax2").html(html);  
+	        }  
+	    });    
+
+	    $.ajax({  
+	        url: "slaider-ajax3.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax3").html(html);  
+	        }  
+	    });  
+
+	}
 
 
-ajax_slaider();
+
+	function showMobile(){  
+
+	    $.ajax({  
+	        url: "slaider-ajax1-mobile.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax1").html(html);  
+	        }  
+	    });  
+
+	    $.ajax({  
+	        url: "slaider-ajax2-mobile.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax2").html(html);  
+	        }  
+	    });  
+
+	    $.ajax({  
+	        url: "slaider-ajax3-mobile.html",  
+	        cache: false,
+	        dataType : "html",  
+	        success: function(html){ 
+	            $(".slaider-ajax3").html(html);  
+	        }  
+	    });  
+
+	}  
+
+
+	$(document).ajaxStop(function() {
+		if($('.swiper-container').length !== 0){
+			ajax_slaider();
+		}
+	});
+
+	function mobileDecktopFun(){
+
+		wrapperWidth = $('.wrapper').width();
+
+		if(wrapperWidth > 767){
+
+			showDesctop();
+
+		}else{
+
+			showMobile();
+
+		}
+
+	}
+
+
+	function mobileDecktopFunResize(){	
+		
+		// wrapperWidthResize = $('.wrapper').width();
+
+		// if( wrapperWidthResize > wrapperWidth)
+
+	}
+
+
+
+	mobileDecktopFun();
+
+
+
+
+
+	// END AJAX
+
+
 
 // END SWIPER
 ///////////////////////////////////////
@@ -310,11 +427,75 @@ ajax_slaider();
 ///////////////////////////////////////
 
 
+
+// SWIPER CONTAINER PRODUCT
+///////////////////////////////////////
+
+	$('.swiper-container-product a').click(function(){
+
+		$('.swiper-container-product a').removeClass('active');
+		$(this).addClass('active');
+		var linkSrsSlide = $(this).attr('href');
+
+		$('.product-img a').attr('href', linkSrsSlide);
+		$('.product-img img').attr('src', linkSrsSlide);
+		return false
+
+	});
+
+// END SWIPER CONTAINER PRODUCT
+///////////////////////////////////////
+
+
+// HEDER MENU SCROLL
+///////////////////////////////////////
+
+	menuTop = $('.main-wrap-header-main').offset();
+
+	scrollFun();
+	scrollFunResize();
+
+function scrollFunResize(){
+
+	$(window).resize(function(){
+
+		menuTop = $('.main-wrap-header-main').offset();	
+
+	});
+
+}
+
+
+function scrollFun(){
+
+	$(window).scroll(function(){
+
+		var scrollHeader = $(window).scrollTop();
+
+		if(scrollHeader > menuTop.top){
+			
+			$('.wrap-header-main').addClass('position-fixed');
+
+		}else{
+
+			$('.wrap-header-main').removeClass('position-fixed');
+
+		}
+	});
+
+}
+// END HEDER MENU SCROLL
+///////////////////////////////////////
+
+
+
 });
 
 
 // ISOTOPE
 ///////////////////////////////////////
+
+
 
 
 $(window).load(function(){
