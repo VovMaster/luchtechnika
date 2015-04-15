@@ -43,9 +43,22 @@
       display: flex;
     }
     a{
-        display: table-cell;
+       
         vertical-align: middle;
+        display: block;
+        width: 100%;
+
     }
+}
+
+.partner-img{
+  display: table;
+  height: 150px;
+  width: 100%;
+  > div{
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .swiper-container-carousel{
@@ -192,7 +205,7 @@ user-select: none;
   width: 100%;
   padding: 0 20px;
   text-align: center;
-  .text-shadow(@shadow_text: 1px 1px 1px #e3e3e3);
+  .text-shadow(0px 2px rgba(0, 0, 0, 0.75));
 }
 
 /* Pagination Styles */
