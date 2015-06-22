@@ -439,8 +439,9 @@ function ajax_slaider(){
 
 		$('.product-img a').attr('href', linkSrsSlide);
 		$('.product-img img').attr('src', linkSrsSlide);
-		return false
 
+		
+		return false
 	});
 
 // END SWIPER CONTAINER PRODUCT
