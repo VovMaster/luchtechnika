@@ -1,0 +1,26 @@
+html{
+	font-size: @base-px;
+	line-height: 16 * @toRems;
+	color: #6b6b6b;
+	font-family: 'Open Sans';
+}
+html, body{
+	height: 100%;
+}
+.wrapper{
+	min-height: 100%;
+	margin-bottom: -114 * @toRems;
+	position: relative;
+}
+.all{
+	padding-bottom: 114 * @toRems;	
+}
+.caret{
+	font-size: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	border-top: (6 / 10) + 0em solid #5a5a5a;
+	border-left: (4 / 10) + 0em solid transparent;
+	border-right: (4 / 10) + 0em solid transparent;
+	width: 0;
+}

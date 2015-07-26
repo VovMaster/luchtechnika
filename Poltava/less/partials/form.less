@@ -1,0 +1,421 @@
+.form-control{
+	border: 1px solid #e2e2e2;
+	background: #ede2cc;
+	.box-shadow(0 0 5px rgba(0, 0, 0, 0.10) inset~"," 0 0 2px rgba(0, 0, 0, 0.10));
+	font-size: 15px;
+	color: #585858;
+	padding: (4 / 15) * 0em (8 / 15) + 0em;
+	display: block;
+	width: 100%;
+	.transition(0.2s);
+	font-family: "PF DinDisplay Pro";
+}
+input.form-control{
+	height: (30 / 15) + 0em;
+
+	&:focus{
+		border-color: #585858;
+		.box-shadow(0 0 2px rgba(0, 0, 0, 1.0));
+	}
+}
+
+textarea.form-control{
+	height: 175px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	resize: none;
+	&:focus{
+		border-color: #585858;
+		.box-shadow(0 0 2px rgba(0, 0, 0, 1.0));
+	}
+}
+
+.btn-green{
+	background: #79b03d;
+	&:hover{
+		background: #79b03d - 20%;
+	}
+}
+.btn-gray{
+	background: #585858;
+	&:hover{
+		background: #585858 - 20%;
+	}
+}
+
+.btn{
+	display: inline-block;
+	border: none;
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.3;
+	font-family: inherit;
+	margin: auto;
+	text-transform: uppercase;
+	padding: 8px 10px;
+	cursor: pointer;
+}
+
+.btn-big{
+	font-size: 13px;
+	line-height: 1.5;
+	padding: 10px 20px;
+	.icon{
+		font-size: 17px;
+		vertical-align: middle;
+	}
+}
+
+input.form-control-big{
+	font-size: 16px;
+	height: (40 / 16) + 0em;
+}
+
+.checkbox-style{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 14px;
+
+	input{
+		display: none;
+		&:checked{
+			+ label{
+				.icon{
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	label{
+		display: block;
+		border: 1px solid #b7b7b7;
+		.border-radius(2px);
+		.box-shadow(0 0 2px rgba(0, 0, 0, 0.10));
+		.gradient(0deg, #eaeaea, #fefefe);
+		height: (14 / 14) + 0em;
+		cursor: pointer;
+		margin-right: (14 / 14) + 0em;
+		position: relative;
+		width: (14 / 14) + 0em;
+	}
+
+	.icon{
+		visibility: hidden;
+		font-size: (8 / 14) + 0em;
+		left: 0px;
+		position: absolute;
+		top: 2px;
+		.text-shadow(0 1px rgba(255, 255, 255, 0.50));
+		width: 100%;
+		text-align: center;
+		letter-spacing: -0.4px;
+	}
+}
+
+// FORM MASSEGE
+////////////////////////////////////////
+
+.block-form{
+	background-image: url(../images/form-bg.jpg);
+	background-size: cover;
+	background-position: 50% 100%;
+	padding: 56px 0 72px 0;
+	margin-bottom: -30px;
+}
+
+.input-col{
+	overflow: hidden;
+	margin: 0 -4px;
+	.wrapper-form-controll{
+		float: left;
+		padding: 0 4px;
+		width: 50%;
+	}
+}
+
+.wrapper-form-controll{
+	margin-bottom: 8px;
+}
+
+.wrapper-form-btn{
+	text-align: center;
+}
+
+.form-massege{
+	margin: auto;
+	max-width: 508px;
+	.form-control{
+		.box-shadow(none);
+		background: rgba(255, 255, 255, 0.9);
+		&:focus{
+			background: #fff;
+		}
+	}
+}
+
+
+// END FORM MASSEGE
+////////////////////////////////////////
+
+
+// FilTER
+////////////////////////////////////////
+
+
+.wrap-line-shadow{
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+
+.line-shadow{
+	background: #f1f1f1;
+	height: 5px;
+	.box-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+	position: relative;
+	z-index: 1;
+}
+
+.contant-filter{
+	margin: 0 -10px;
+
+
+	> * {
+		float: left;
+		margin: 0 10px 10px;
+	}
+
+	> .picker{
+
+		margin-top: 0;
+		width: 160px;
+
+	}
+
+	> .select-big{
+
+		width: 120px;
+
+	}
+
+	> .form-control{
+
+		width: 90px;
+
+	}
+
+	> .btn{
+		min-width: 164px;
+		padding-left: 10px;
+		padding-right: 10px;
+		float: right;
+	}
+	.ik_select_link_text::after{
+		top: 13px;
+	}
+	.ik_select_link_text::before{
+		border-left: 0.4em solid transparent;
+		border-right: 0.4em solid transparent;
+		border-bottom: 0.6em solid #5a5a5a;
+		content: " ";
+		display: inline-block;
+		font-size: 0.625rem;
+		position: absolute;
+		right: 0;
+		top: 4px;
+		vertical-align: middle;
+		width: 0;
+	}
+}
+
+.wrap-filter{
+	margin: -106px -20px 0;
+	padding: 17px 20px 10px;
+	background: #fff;
+	z-index: 1;
+	position: relative;
+}
+
+.title-filter{
+	color: #323232;
+	font-size: 18px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 0 0 13px 0;
+}
+
+.right-filter .radio-inline{
+	margin-top: 18px;
+}
+.radio-style{
+	display: inline-block;
+	vertical-align: middle;
+	input{
+		display: none;
+		&:checked + label{
+			cursor: default;
+			&:after{
+				opacity: 1.0;
+			}
+		}
+	}
+	label{
+		margin-right: 8px;
+		cursor: pointer;
+		&:after{
+			opacity: 0;
+		}
+	}
+}
+@media (max-width: 1050px){
+	.contant-filter{
+		margin: 0 -1%;
+
+		> *:not(.btn) {
+			width: 48%;
+			margin: 0 1% 10px;
+		}
+
+		> .btn {
+			float: none;
+			display: inline-block;
+		}
+	}
+	.wrap-filter{	
+		padding-left: 18px;
+		padding-right: 18px;
+		margin: auto;
+		text-align: center;
+	}
+	.bg-logo{
+		display: none;
+	}
+	.filter-more-link{
+		display: block !important;
+		padding: 10px;
+		a{
+			font-size: 15px;
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+	.btn-filter{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100% !important;
+	}
+	.btn-filter{
+		margin: 0 !important;
+		width: 100% !important;
+	}
+	.filter-more-block{
+		margin: 0 !important;
+		padding: 0 1% !important;
+		width: 100% !important;
+		> div {
+			margin: 0px -18px;
+			width: auto;
+		}
+	}
+
+	.contant-filter{
+		position: relative;
+		padding-bottom: 54px;
+	}
+
+	.filter-more-content{
+		background: #e6e6e6;
+	}
+
+	.filter-more-content{
+		padding: 10px;
+	}
+	.filter-more-block{
+		padding: 0;
+	}
+
+	.filter-close{
+		display: none;
+	}
+	.filter-more-content{
+		display: none;
+	}
+	.open-filter{
+		.filter-more{
+			display: none;
+		}
+		.filter-close{
+			display: inline-block;
+		}
+		+ div{
+			display: block;
+		}
+	}
+
+}
+
+@media (max-width: 640px){
+	.wrap-filter{
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+	.contant-filter{
+		margin: 0 -2%;
+		> *:not(.btn){
+			width: 46%;
+			margin: 0 2% 10px;
+		}
+	}
+
+
+	.left-filter, .right-filter{
+		float: none !important;
+		text-align: center;
+	}
+
+	.left-filter .checkbox-line{
+		float: none !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 10px 0;
+	}
+	.right-filter .radio-inline{
+		float: none !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 10px 0;
+	}
+
+
+	.filter-more-block{
+		padding: 0 2% !important;
+		> div {
+			margin: 0px -13px;
+		}
+	}
+
+}
+
+
+@media (max-width: 440px){
+	.wrap-filter{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.filter-more-block{
+		> div {
+			margin: 0px -10px;
+		}
+	}
+
+
+
+}
+
+// END FilTER
+////////////////////////////////////////
+
+

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Viptallinn</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie.css">
+	<![endif]-->
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ikSelect.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.ui.timepicker.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="all">
+		<div class="wrap-header-main">
+			<header class="header-main clearfix main-width">
+				<div class="logo">
+					<a href="">
+						<img src="images/logo.png" alt="logo">
+					</a>
+				</div>
+				<button class="button-menu">
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+				</button>
+				<div class="change-language desctop-language">
+
+					<select>
+						<option>English</option>
+						<option>Estonian</option>
+						<option>Ukrainian</option>
+					</select>
+
+				</div>
+
+				<div class="change-language mobile-language">
+
+					<select>
+						<option>Eng</option>
+						<option>Est</option>
+						<option>UKR</option>
+					</select>
+
+
+				</div>
+
+				<button class="basket-header-button">
+					<i class="icon icon-basket"></i>
+				</button>
+				<div class="wrapper-main-nav">
+					<div class="main-nav-js">
+						<h3>VIP Tallinn Menu:</h3>
+						<nav class="main-nav">
+							<ul>
+								<li class="active"><a href="">Home</a></li>
+								<li><a href="">Appartments</a></li>
+								<li><a href="">Transfer</a></li>
+								<li><a href="">Escort</a></li>
+								<li><a href="">Restaurants</a></li>
+								<li><a href="">News</a></li>
+								<li><a href="">Contact</a></li>
+							</ul>
+						</nav>
+						<div class="close-nav-main">
+							<a href="">Close window</a>
+						</div>
+					</div>
+				</div>
+				<div class="sign-in">
+					<a href="#login-js" data-link="data-link-header" class="login-button"><i class="icon icon-login"></i><span>Login</span></a>
+					<a href="#register-js" data-link="data-link-header" class="register-button"><i class="icon icon-registr"></i><span>Register</span></a>
+				</div>
+				<div class="sign-form" id="login-js">
+					<h3 class="sign-form-title">Authentification</h3>
+					<h4 class="form-title form-title-green"> <i class="icon icon-login"></i> Already registered</h4>
+					<form class="content-form">
+						<div class="wrapper-label">
+							<label>E-mail address:</label>
+						</div>
+						<input class="form-control" type="text">
+						<div class="wrapper-label">
+							<label>Password:</label>
+						</div>
+						<input class="form-control" type="password">
+						<a href="" class="link-form">Forgot your password?</a>
+						<button type="submit" class="btn btn-green">Authentification</button>
+					</form>
+					<h4 class="form-title form-title-gray"><i class="icon icon-registr"></i> Create an accout</h4>
+					<form class="content-form">
+						<div class="text-form-top">* Please enter your email address to create an account.</div>
+						<div class="wrapper-label">
+							<label>E-mail address:</label>
+						</div>
+						<input class="form-control" type="text">
+						<button type="submit" class="btn btn-gray">Create an account</button>
+					</form>
+				</div>
+
+
+				<div class="sign-form" id="register-js">
+					<h3 class="sign-form-title">Authentification</h3>
+					<h4 class="form-title form-title-gray"><i class="icon icon-registr"></i> Create an accout</h4>
+					<form class="content-form">
+						<div class="wrapper-label">
+							<label><i class="important-field">*</i> First Name</label>
+						</div>
+						<input class="form-control" type="text">
+						<div class="wrapper-label">
+							<label><i class="important-field">*</i> Last Name</label>
+						</div>
+						<input class="form-control" type="text">
+						<div class="wrapper-label">
+							<label><i class="important-field">*</i> E-mail</label>
+						</div>
+						<input class="form-control" type="text">
+						<div class="wrapper-label">
+							<label><i class="important-field">*</i> Password</label>
+						</div>
+						<input class="form-control" type="password">
+						<div class="text-bottom-form">* (Six «6» characters minimum)</div>
+						<div class="wrapper-label">
+							<label>Date of birth</label>
+						</div>
+						<div class="select-line clearfix">
+							<div class="select-line3">
+								<select>
+									<option>-</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+							<div class="select-line6">
+								<select>
+									<option>-</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+							<div class="select-line3">
+								<select>
+									<option>-</option>
+									<option>1000</option>
+									<option>2000</option>
+									<option>1990</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div class="field-confirmation">
+							<div class="checkbox-style">
+								<input type="checkbox" id="checkbox1">
+								<label for="checkbox1"><i class="icon icon-ok"></i></label>
+							</div>
+							<span>Sign up for our newsletter!</span>
+						</div>
+						<div class="field-confirmation">
+							<div class="checkbox-style">
+								<input type="checkbox" id="checkbox2">
+								<label for="checkbox2"><i class="icon icon-ok"></i></label>
+							</div>
+							<span>Receive special offers from our partners!</span>
+						</div>
+
+						<h5 class="customer-data-privacy">Customer data privacy</h5>
+						<div>
+							The personal data you provide is used to answer queries, process orders or allow access to specific information. You have the right to modify and delete all the personal information found in the "My Account" page.
+						</div>
+
+						<div class="info-form"><i class="important-field">*</i> Required field</div>
+
+
+						<button type="submit" class="btn btn-gray">Create an account</button>
+					</form>
+				</div>
+
+
+				<div class="sidebar-header">
+					<aside class="sidebar active">
+				    	<h5 class="title-basket active">
+				    		<div class="icon icon-basket"></div>Your order
+				    	</h5>
+				    	<form>
+					    	<div class="brief-description selected">
+						    	<h4 class="service-name service-name-bg">Apartment</h4>
+					    		<div class="remove-info">
+									<div class="title-info">Vabaduse Väljak 6</div>
+									<div class="info-value">200 € per night</div>
+									<button class="delete">×</button>
+								</div>
+					    		<div class="brief-info-wrap">
+					    			<div class="brief-info">
+					    				<div class="container-img-info">
+											<img alt="" src="images/basket_apartament.jpg" alt="">
+										</div>
+										<div class="brief-info-style">
+											<div class="title-info">Arrival:</div>
+											<div class="info-value">01.01.2015</div>
+											<div class="title-info">Departure:</div>
+											<div class="info-value">15.01.2015</div>
+										</div>
+									</div>
+					    		</div>
+					    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+					    	</div>
+					    	<div class="brief-description selected brief-description-transfer">
+					    		<h4 class="service-name service-name-bg">Transfer</h4>
+					    		<div class="remove-info">
+					    			<div class="title-info">Mersedes Bens S-class</div>
+									<div class="info-value">25 € per hour</div>
+									<button class="delete">×</button>
+					    		</div>
+					    		<div class="brief-info-wrap">
+					    			<div class="brief-info">
+					    				<div class="container-img-info">
+											<img alt="" src="images/transfer_inside.jpg" alt="">
+										</div>
+										<div class="brief-info-style">
+											<div class="title-info">Information:</div>
+											<div class="info-value">
+												01.01.2015 - 15:40<br>
+												Tallinn Airport<br>
+												MC 25789<br>
+												6 days<br>
+											</div>
+										</div>
+									</div>
+					    		</div>
+					    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+					    	</div>
+					    	<div class="brief-description selected">
+					    		<h4 class="service-name service-name-bg">Escort</h4>
+					    		<div class="remove-info">
+									<div class="title-info">Sofi Loren</div>
+									<div class="info-value">100 € per hour</div>
+									<button class="delete">×</button>
+								</div>
+					    		<div class="brief-info-wrap">
+					    			<div class="brief-info">
+					    				<div class="container-img-info">
+											<img alt="" src="images/escort_aside.jpg" alt="">
+										</div>
+										<div class="brief-info-style">
+											<div class="title-info">Date:</div>
+											<div class="info-value">01.01.2015</div>
+											<div class="title-info">Hours:</div>
+											<div class="info-value">19:30 - 21:30</div>
+										</div>
+									</div>
+					    		</div>
+					    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+					    	</div>
+					    	<div class="brief-description wrap-picker">
+					    		<h4 class="service-name">Entertainment</h4>
+					    	
+						    	<div class="brief-info-wrap">
+					    			<div class="date-picker picker">
+					    				<input class="form-control form-control-big" type="text">
+					    				<div class="icon icon-calendar"></div>
+					    			</div>
+					    			<div class="time-picker picker">
+					    				<input class="form-control form-control-big" type="text">
+					    				<div class="icon icon-time"></div>
+					    			</div>
+					    		</div>
+				    		</div>
+				    		<div class="gift-wrap">
+					    		<h5 class="gift-title"><div class="icon icon-present"></div>Gift</h5>
+					    		<div class="gift-block">
+					    			<div class="gift-img">
+					    				<img alt="" src="images/sidebar_gift.jpg">
+					    			</div>
+					    			<div class="block-style-info">
+						    			<div class="gift-name">Gold ring with diamond</div>
+						    			<div class="price-block">
+											<div class="text-red">45 €</div>
+										</div>
+									</div>
+
+					    		</div>
+					    		<div class="gift-block">
+					    			<div class="gift-img">
+					    				<img alt="" src="images/sidebar_gift_2.jpg">
+					    			</div>
+					    			<div class="block-style-info">
+						    			<div class="gift-name">Gold ring with diamond</div>
+						    			<div class="price-block">
+											<div class="text-red">45 €</div>
+										</div>
+									</div>
+					    		</div>
+					    	</div>
+					    	<div class="wrapper-btn">
+					    		<button class="btn btn-green btn-big" type="submit">submit</button>
+					    		<button class="btn btn-light btn-big" type="submit">Proceed to Checkout</button>
+					    	</div>
+				    	</form>
+				  	</aside>
+			    </div>
+
+
+			    <div class="modal-block success">
+					<div class="modal-title">
+						<div class="icon icon-ok-circle"></div>success
+					</div>
+					<div class="modal-text">
+						<p>Congratulations! Your account has been successfully added.<br> Now you can log in to our system!<br>Successful purchases!</p>
+					</div>
+					<a class="modal-close" href="">Close window</a>
+				</div>
+
+
+				<div class="modal-block attention">
+					<div class="modal-title">
+						<div class="icon icon-close-circle"></div>Attention!
+					</div>
+					<div class="modal-text">
+						<p>Sorry! But something goes wrong! Make shure that all field<br>are require or check box bellow are clicked!</p>
+					</div>
+					<a class="try-again" href="">Try again!</a>
+					<a class="modal-close" href="">Close window</a>
+				</div>
+			</header>
+		</div>
+		<div class="wrapper-main">
+			<main class="basket-column">
+				<aside class="sidebar active">
+			    	<h5 class="title-basket active">
+			    		<div class="icon icon-basket"></div>Your order
+			    	</h5>
+			    	<form>
+				    	<div class="brief-description selected">
+					    	<h4 class="service-name service-name-bg">Apartment</h4>
+				    		<div class="remove-info">
+								<div class="title-info">Vabaduse Väljak 6</div>
+								<div class="info-value">200 € per night</div>
+								<button class="delete">×</button>
+							</div>
+				    		<div class="brief-info-wrap">
+				    			<div class="brief-info">
+				    				<div class="container-img-info">
+										<img alt="" src="images/basket_apartament.jpg" alt="">
+									</div>
+									<div class="brief-info-style">
+										<div class="title-info">Arrival:</div>
+										<div class="info-value">01.01.2015</div>
+										<div class="title-info">Departure:</div>
+										<div class="info-value">15.01.2015</div>
+									</div>
+								</div>
+				    		</div>
+				    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+				    	</div>
+				    	<div class="brief-description selected brief-description-transfer">
+				    		<h4 class="service-name service-name-bg">Transfer</h4>
+				    		<div class="remove-info">
+				    			<div class="title-info">Mersedes Bens S-class</div>
+								<div class="info-value">25 € per hour</div>
+								<button class="delete">×</button>
+				    		</div>
+				    		<div class="brief-info-wrap">
+				    			<div class="brief-info">
+				    				<div class="container-img-info">
+										<img alt="" src="images/transfer_inside.jpg" alt="">
+									</div>
+									<div class="brief-info-style">
+										<div class="title-info">Information:</div>
+										<div class="info-value">
+											01.01.2015 - 15:40<br>
+											Tallinn Airport<br>
+											MC 25789<br>
+											6 days<br>
+										</div>
+									</div>
+								</div>
+				    		</div>
+				    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+				    	</div>
+				    	<div class="brief-description selected">
+				    		<h4 class="service-name service-name-bg">Escort</h4>
+				    		<div class="remove-info">
+								<div class="title-info">Sofi Loren</div>
+								<div class="info-value">100 € per hour</div>
+								<button class="delete">×</button>
+							</div>
+				    		<div class="brief-info-wrap">
+				    			<div class="brief-info">
+				    				<div class="container-img-info">
+										<img alt="" src="images/escort_aside.jpg" alt="">
+									</div>
+									<div class="brief-info-style">
+										<div class="title-info">Date:</div>
+										<div class="info-value">01.01.2015</div>
+										<div class="title-info">Hours:</div>
+										<div class="info-value">19:30 - 21:30</div>
+									</div>
+								</div>
+				    		</div>
+				    		<a href="" class="add"><div class="circle-add"></div>Add more</a>
+				    	</div>
+				    	<div class="brief-description wrap-picker">
+				    		<h4 class="service-name">Entertainment</h4>
+				    	
+					    	<div class="brief-info-wrap">
+				    			<div class="date-picker picker">
+				    				<input class="form-control form-control-big" type="text" placeholder="23.12.2015">
+				    				<div class="icon icon-calendar"></div>
+				    			</div>
+				    			<div class="time-picker picker">
+				    				<input class="form-control form-control-big" type="text" placeholder="19:30">
+				    				<div class="icon icon-time"></div>
+				    			</div>
+				    		</div>
+			    		</div>
+			    		<div class="gift-wrap">
+				    		<h5 class="gift-title"><div class="icon icon-present"></div>Gift</h5>
+				    		<div class="gift-block">
+				    			<div class="gift-img">
+				    				<img alt="" src="images/sidebar_gift.jpg">
+				    			</div>
+				    			<div class="block-style-info">
+					    			<div class="gift-name">Gold ring with diamond</div>
+					    			<div class="price-block">
+										<div class="text-red">45 €</div>
+									</div>
+								</div>
+								<button class="delete">×</button>
+				    		</div>
+				    		<div class="gift-block">
+				    			<div class="gift-img">
+				    				<img alt="" src="images/sidebar_gift_2.jpg">
+				    			</div>
+				    			<div class="block-style-info">
+					    			<div class="gift-name">Gold ring with diamond</div>
+					    			<div class="price-block">
+										<div class="text-red">45 €</div>
+									</div>
+								</div>
+								<button class="delete">×</button>
+				    		</div>
+				    	</div>
+				    	<div class="wrapper-btn">
+				    		<button class="btn btn-green btn-big" type="submit">submit</button>
+				    		<button class="btn btn-light btn-big" type="submit">Proceed to Checkout</button>
+				    	</div>
+			    	</form>
+			    </aside>
+				<section class="clearfix main-width two-column">
+					<div class="wrap-slider-column">
+						<div class="swiper-container swiper-container-main">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide">
+					            	<a href="">
+					            		<img src="images/entertainment_restoran_inside.jpg" alt="" class="desctop-slide">
+					            		<img src="images/mobile_entertainment_inside_1.jpg" alt="" class="mobile-slide">
+					            	</a>
+					            </div>
+					            <div class="swiper-slide">
+					            	<a href="">
+					            		<img src="images/entertainment_restoran_inside.jpg" alt="" class="desctop-slide">
+					            		<img src="images/mobile_entertainment_inside_1.jpg" alt="" class="mobile-slide">
+					            	</a>
+					            </div>
+					        </div>
+					        <div class="swiper-pagination"></div>
+					        <!--<div class="gallery">
+					       		<div class="icon"></div>Gallery
+					       	</div>-->
+					    </div>
+					    <div class="link-Gallery-wrap">
+					    	<a class="link-Gallery" href="#"><i class="icon icon-camera"></i> Gallery</a>
+					    </div>
+				    </div>
+				    <div class="information-column">
+				    	<div class="breadcrumbs border hidden-xs">
+				    		<ul>
+				    			<li>
+				    				<a href="">Home</a>
+				    			</li>
+				    			<li>
+				    				<a href="">Entertainment</a>
+				    			</li>
+				    			<li>Dinner for two</li>
+				    		</ul>
+				    	</div>
+				    	<article class="item-style inside-page">
+				    		<h1 class="title-style">Gala dinner for two in Astoria restaurant</h1>
+				    		<div class="item-style-content">
+				    			<div class="price-inside">
+					    			Price: <b>150 €</b>
+					    		</div>
+					    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida sem eros, vitae facilisis quam semper in. Donec et odio at sapien porttitor tristique. Vestibulum nec ultrices mi.</p>
+					    		<p>Nulla pulvinar dignissim lorem, eget congue velit pellentesque mattis. Vestibulum eget suscipit risus. Quisque est nisl, posuere quis purus egestas, rhoncus egestas velit.</p>
+				    		</div>
+				    		<h2 class="title-style title-accordion">More details about this event</h2>
+				    		<div class="block-style wrap-accordion open-accordion">
+				    			<header class="header-accordion">
+					    			<h3 class="title-style">
+					    				<span class="icon-info icon"></span>Restaurant menu:
+					    			</h3>
+					    			<a class="open" href="">Open</a>
+					    			<a class="close" href="">Close</a>
+				    			</header>
+				    			<div class="content-accordion">
+					    			<h4 class="title-style">STARTERS:</h4>
+									<p>TRADITSIOONILINE CATALOONIA ESCALIVADA “COCA” KITSEJUUSTUGA</p>
+									<p>VÜRTSISE	SEALIHA, TRÜHVLIÕLI, MUNAKOLLASE JA KRÕBEDA SIBULA PARMENTIER</p>
+									<p>TUUNIKALATATAKI SEESAMISEEMNETEGA, VÄRSKE AVOKAADO JA PIQUILLO	PAPRIKA VINEGRETT</p>
+									<h4 class="title-style">MAIN COURSES:</h4>
+									<p>TRADITSIOONILINE CATALOONIA ESCALIVADA “COCA” KITSEJUUSTUGA</p>
+									<p>VÜRTSISE	SEALIHA, TRÜHVLIÕLI, MUNAKOLLASE	JA KRÕBEDA SIBULA PARMENTIER</p>
+									<p>TUUNIKALATATAKI SEESAMISEEMNETEGA, VÄRSKE AVOKAADO JA PIQUILLO	PAPRIKA VINEGRETT</p>
+								</div>
+				    		</div>
+				    		<div class="block-style wrap-accordion">
+				    			<header class="header-accordion">
+					    			<h3 class="title-style">
+					    				<span class="icon-info icon"></span>Restaurant addres
+					    			</h3>
+					    			<a class="open" href="">Open</a>
+					    			<a class="close" href="">Close</a>
+				    			</header>
+				    			<div class="content-accordion">
+					    			<h4 class="title-style">STARTERS:</h4>
+									<p>TRADITSIOONILINE CATALOONIA ESCALIVADA “COCA” KITSEJUUSTUGA</p>
+									<p>VÜRTSISE	SEALIHA, TRÜHVLIÕLI, MUNAKOLLASE JA KRÕBEDA SIBULA PARMENTIER</p>
+									<p>TUUNIKALATATAKI SEESAMISEEMNETEGA, VÄRSKE AVOKAADO JA PIQUILLO	PAPRIKA VINEGRETT</p>
+									<h4 class="title-style">MAIN COURSES:</h4>
+									<p>TRADITSIOONILINE CATALOONIA ESCALIVADA “COCA” KITSEJUUSTUGA</p>
+									<p>VÜRTSISE	SEALIHA, TRÜHVLIÕLI, MUNAKOLLASE	JA KRÕBEDA SIBULA PARMENTIER</p>
+									<p>TUUNIKALATATAKI SEESAMISEEMNETEGA, VÄRSKE AVOKAADO JA PIQUILLO	PAPRIKA VINEGRETT</p>
+								</div>
+				    		</div>
+				    		<div class="block-style wrap-accordion open-accordion">
+				    			<header class="header-accordion title-color">
+					    			<h3 class="title-style">
+					    				<span class="icon-present icon"></span>Prepeare for this occasion
+					    			</h3>
+					    			<a class="open" href="">Open</a>
+					    			<a class="close" href="">Close</a>
+				    			</header>
+					    		<div class="content-accordion">
+				    				<section class="present-block">
+						    			<h3 class="title-style">Make a present to you lover:</h3>
+						    			<div class="row">
+											<div class="wrapper-block-style">
+								            	<a href="" class="block-style">
+								            		<img src="images/present_1.jpg" alt="">
+								            	</a>
+								            	<div class="block-style-info">
+								            		<h3 class="title-style"><a href="">Flowers</a></h3>
+													<div class="price-block">
+														<div class="text-red">45 €</div>
+													</div>
+								            	</div>
+							            	</div><div class="wrapper-block-style">
+								            	<a href="" class="block-style">
+								            		<img src="images/present_2.jpg" alt="">
+								            	</a>
+								            	<div class="block-style-info">
+								            		<h3 class="title-style"><a href="">Gold ring with diamond</a></h3>
+													<div class="price-block">
+														<div class="text-red">450 €</div>
+													</div>
+								            	</div>
+							            	</div>
+							            	<div class="wrap-view-all">
+							            		<a class="view-all" href="">View all gifts</a>
+							            	</div>
+						            	</div>
+									</section>
+								</div>
+				    		</div>
+				    		<div class="wrap-bottom-block">
+					    		<div class="share-block">
+					    			<div class="title-share">Share list:</div>
+					    			<a href="" class="icon icon-ok-social"></a>
+					    			<a href="" class="icon icon-pinterest"></a>
+					    			<a href="" class="icon icon-twitter"></a>
+					    			<a href="" class="icon icon-vk"></a>
+					    			<a href="" class="icon icon-facebook"></a>
+					    			<a href="" class="icon icon-google"></a>
+					    		</div>
+					    		<a href="" class="print pull-right">
+					    			<div class="icon icon-print"></div>Print
+					    		</a>
+				    		</div>
+				    	</article>
+				    </div>
+				</section>
+			</main>
+		</div>
+	</div>
+</div>
+<footer class="footer-main">
+	<div class="bg-gray clearfix footer-main-top">
+		<div class="main-width">
+			<a href="" class="top-scroll">Back to top</a>
+			<nav class="footer-nav">
+				<ul>
+					<li>
+						<a href="">Appartments</a>
+					</li>
+					<li>
+						<a href="">Transfer</a>
+					</li>
+					<li>
+						<a href="">Escort</a>
+					</li>
+					<li>
+						<a href="">Restaurants</a>
+					</li>
+					<li>
+						<a href="">News</a>
+					</li>
+					<li>
+						<a href="">Pricelist</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<form class="search-form">
+				<div class="search-form-input">
+					<input type="text" placeholder="Search for topics, articles, data..." class="form-control form-control-big">
+				</div>
+				<div class="search-form-button">
+					<button class="btn btn-green btn-big" type="submit"><i class="icon icon-search"></i> Search</button> 	
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="footer-main-bottom">
+		<div class="main-width">
+			<div class="footer-info-site">
+				<div>
+					Hosted by: <br>
+					Beehosting.net 
+				</div>
+				<div>
+					Created by:<br>
+					<a href="">Mars CREATIVE</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="images/logo-footer-info.png" alt="logo">
+					</a>
+				</div>
+			</div>
+			<div class="copy">
+			Copyright &copy; 2015 by VIP TALLINN. All Rights Reserved. Designated trademarks and brands are the property of their respective owners.  Use of this Web site constitutes acceptance of the VIP TALLINN . User Agreement and Privacy Policy.
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html> 
